@@ -13,9 +13,9 @@ html {
 }
 .title {
   vertical-align: top;
-  font-size: 700%;
+  font-size: 8vw;
   font-family: 'Lobster';
-  margin-bottom: 0.2em;
+  margin-bottom: 1vw;
   text-align: center;
   display: table-row;
   vertical-align: top;
@@ -37,7 +37,7 @@ html {
   vertical-align: middle;
 }
 .quickguide {
-  margin-bottom: 2em;
+  height: 20vw;
   text-align: center;
   display: inline-block;
   color: #f44336;
@@ -46,13 +46,12 @@ html {
   box-shadow: inset 0 0 10px 0 #ABABAB;
   -webkit-box-shadow: inset 0 0 10px 0 #ABABAB;
   -moz-box-shadow: inset 0 0 10px 0 #ABABAB;
-  -o-box-shadow: inset 0 0 10px 0 #ABABAB;ad
+  -o-box-shadow: inset 0 0 10px 0 #ABABAB;
 }
 .quickguide h1 {
-  font-size: 300%;
-  text-shadow: 2px 1px 0 #ABABAB;
-  margin: 1em 1em;
-  padding: 1em;
+  font-size: 5vw;
+  text-shadow: 3px 2px 0 #ABABAB;
+  padding: 3vw;
 }
 h3 {
   color: #ff8a80;
@@ -65,7 +64,7 @@ a:hover {
   text-decoration: underline;
 }
 .keycodeDisplay {
-  margin-bottom: 2em;
+  height: 20vw;
   text-align: center;
   display: none;
   color: #f44336;
@@ -77,21 +76,18 @@ a:hover {
   -o-box-shadow: inset 0 0 10px 0 #ABABAB;
 }
 .keycodeDisplay h1 {
-  font-size: 1350%;
-  margin-left: 1em;
-  margin-right: 1em;
-  padding: 0.1em 0.1em;
+  font-size: 15vw;
+  padding: 1vw;
 }
 .keyboardKey {
+  margin-top: 1vw;
+  font-size: 1vw;
   text-align: center;
   display: none;
   color: #ff8a80;
 }
 .keyboardKey h3 {
-  margin-left: 1em;
-  margin-right: 1em;
-  margin-bottom: 2em;
-  padding: 1em;
+  padding: 1vw;
   background-color: #EAEAEA;
   border-radius: 0.4em 0.4em 0.4em 0.4em;
   box-shadow: 2px 5px 0 #ABABAB;
@@ -100,15 +96,14 @@ a:hover {
   -o-box-shadow: 0 2px 5px 0 #ABABAB;
 }
 .tip {
+  margin-top: 1vw;
+  font-size: 1vw;
   text-align: center;
   display: inline-block;
   color: #ff8a80;
 }
 .tip h3 {
-  margin-left: 1em;
-  margin-right: 1em;
-  margin-bottom: 2em;
-  padding: 1em;
+  padding: 1vw;
   background-color: #EAEAEA;
   border-radius: 0.4em 0.4em 0.4em 0.4em;
   box-shadow: 2px 5px 0 #ABABAB;
@@ -121,6 +116,7 @@ a:hover {
 }
 .about {
   display: table-row;
+  font-size: 1.5vw;
   vertical-align: bottom;
 }
 /* OCTOCAT STYLE */
