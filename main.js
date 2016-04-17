@@ -11,6 +11,7 @@ let keyCodeOnKeyDown = 0;
 let charCodeOnKeyPress = 0;
 
 ultimatefocus(hiddeninput);
+eventFire(hiddeninput, 'click');
 
 hiddeninput.onkeydown = function(event) {
   keyCodeOnKeyDown = (event.keyCode ? event.keyCode : event.which);
@@ -63,6 +64,16 @@ function ultimatefocus(target) {
   target.focus();
   target.value = '';
 };
+
+function eventFire(el, etype){
+  if (el.fireEvent) {
+    el.fireEvent('on' + etype);
+  } else {
+    var evObj = document.createEvent('Events');
+    evObj.initEvent(etype, true, false);
+    el.dispatchEvent(evObj);
+  }
+}
 
 function copyToClipboard(target) {
   let keycodeNum = document.querySelector('.keycodeNum');
