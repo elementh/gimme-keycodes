@@ -11,7 +11,6 @@ let keyCodeOnKeyDown = 0;
 let charCodeOnKeyPress = 0;
 
 ultimatefocus(hiddeninput);
-eventFire(hiddeninput, 'click');
 
 hiddeninput.onkeydown = function(event) {
   keyCodeOnKeyDown = (event.keyCode ? event.keyCode : event.which);
