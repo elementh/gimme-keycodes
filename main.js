@@ -18,18 +18,22 @@ hiddeninput.onkeydown = function(event) {
   if (!event.metaKey && keyCodeOnKeyDown !== 0) {
     event.preventDefault();
   }
+  //Styling
   quickguide.style.display = 'none';
   keycodeDisplay.style.display = 'inline-block';
   tip.style.display = 'none';
   keyboardKey.style.display = 'inline-block';
   keycodeDisplay.innerHTML = '<h1 class="keycodeNum">' + keyCodeOnKeyDown + '</h1>';
+
   copyToClipboard(dummyinput);
   ultimatefocus(hiddeninput);
   displayKeyCodeName();
 };
 hiddeninput.onkeypress = function(event) {
   charCodeOnKeyPress = event.charCode;
-  if (keyCodeOnKeyDown !== 0) {} else if (charCodeOnKeyPress === 209 || charCodeOnKeyPress === 241) {
+  if (keyCodeOnKeyDown !== 0) {
+    return;
+  } else if (charCodeOnKeyPress === 209 || charCodeOnKeyPress === 241) {
     keycodeDisplay.innerHTML = '<h1 class="keycodeNum">192</h1>';
   } else if (charCodeOnKeyPress === 199 || charCodeOnKeyPress === 231) {
     keycodeDisplay.innerHTML = '<h1 class="keycodeNum">191</h1>';
@@ -63,25 +67,16 @@ document.onclick = function() {
 function ultimatefocus(target) {
   target.focus();
   target.value = '';
-};
-
-function eventFire(el, etype){
-  if (el.fireEvent) {
-    el.fireEvent('on' + etype);
-  } else {
-    var evObj = document.createEvent('Events');
-    evObj.initEvent(etype, true, false);
-    el.dispatchEvent(evObj);
-  }
 }
+
 
 function copyToClipboard(target) {
   let keycodeNum = document.querySelector('.keycodeNum');
   target.value = keycodeNum.innerHTML;
   target.select();
   try {
-    var successful = document.execCommand('copy');
-    var msg = successful ? 'successful' : 'unsuccessful';
+    let successful = document.execCommand('copy');
+    let msg = successful ? 'successful' : 'unsuccessful';
     console.log('Copying text command was ' + msg);
   } catch (err) {
     console.log('Oops, unable to copy');
