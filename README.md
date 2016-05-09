@@ -3,7 +3,7 @@ This funny little tool tells you the keycode for every key you press. Easy, huh?
 
 A nice feature of <a href="http://lucasmarino.me/gimme-keycodes">`Gimme Keycodes!`</a> is that it can detect some faulty firefox keycodes - like 'ñ' on some keyboards!
 
-![](https://raw.githubusercontent.com/elementh/gimme-keycodes/master/screenshots/preview.gif)
+![](https://raw.githubusercontent.com/elementh/gimme-keycodes/gh-pages/screenshots/preview.gif)
 
 # Roadmap
 
