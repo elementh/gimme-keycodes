@@ -1,0 +1,26 @@
+{
+  "env": {
+    "es6": true,
+    "browser": true
+  },
+  "globals": {
+    "ga": true
+  },
+  "extends": "eslint:recommended",
+  "rules": {
+    "linebreak-style": [
+      "error", "unix"
+    ],
+    "quotes": [
+      "error", "single"
+    ],
+    "semi": [
+      "error", "never"
+    ],
+    "no-console": [
+      "warn", {
+        "allow": ["warn", "error"]
+      }
+    ]
+  }
+}
