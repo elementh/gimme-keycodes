@@ -1,5 +1,6 @@
 'use strict'
 
+/* ================ SELECTORS ================ */
 let quickguide = document.querySelector('.quickguide')
 let hiddeninput = document.querySelector('input')
 let dummyinput = document.querySelector('.dummy')
@@ -9,9 +10,16 @@ let keyboardKey = document.querySelector('.keyboardKey')
 let tip = document.querySelector('.tip')
 let keyCodeOnKeyDown = 0
 let charCodeOnKeyPress = 0
+/* =========================================== */
 
-ultimatefocus(hiddeninput)
+/* ================== FOCUS ================== */
+putFocusOn(hiddeninput)
+document.onclick = function() {
+  putFocusOn(hiddeninput)
+}
+/* =========================================== */
 
+/* =============== ON KEY DOWN =============== */
 hiddeninput.onkeydown = function(event) {
   ga('send', 'pageview')
   keyCodeOnKeyDown = (event.keyCode ? event.keyCode : event.which)
@@ -26,9 +34,12 @@ hiddeninput.onkeydown = function(event) {
   keycodeDisplay.innerHTML = '<h1 class="keycodeNum">' + keyCodeOnKeyDown + '</h1>'
 
   copyToClipboard(dummyinput)
-  ultimatefocus(hiddeninput)
+  putFocusOn(hiddeninput)
   displayKeyCodeName()
 }
+/* =========================================== */
+
+/* =============== ON KEY PRESS ============== */
 hiddeninput.onkeypress = function(event) {
   charCodeOnKeyPress = event.charCode
   if (keyCodeOnKeyDown !== 0) {
@@ -39,35 +50,37 @@ hiddeninput.onkeypress = function(event) {
     keycodeDisplay.innerHTML = '<h1 class="keycodeNum">191</h1>'
   }
   copyToClipboard(dummyinput)
-  ultimatefocus(hiddeninput)
+  putFocusOn(hiddeninput)
   displayKeyCodeName()
 }
+/* =========================================== */
+
+/* ================ ON KEY UP ================ */
 hiddeninput.onkeyup = function() {
   if (keyCodeOnKeyDown === 0 && hiddeninput.value === '´') {
     keycodeDisplay.innerHTML = '<h1 class="keycodeNum">222</h1>'
     copyToClipboard(dummyinput)
-    ultimatefocus(hiddeninput)
+    putFocusOn(hiddeninput)
   } else if (keyCodeOnKeyDown === 0 && hiddeninput.value === '`') {
     keycodeDisplay.innerHTML = '<h1 class="keycodeNum">219</h1>'
     copyToClipboard(dummyinput)
-    ultimatefocus(hiddeninput)
+    putFocusOn(hiddeninput)
   } else if (keyCodeOnKeyDown === 0 && hiddeninput.value === '¡') {
     keycodeDisplay.innerHTML = '<h1 class="keycodeNum">221</h1>'
     copyToClipboard(dummyinput)
-    ultimatefocus(hiddeninput)
+    putFocusOn(hiddeninput)
   }
   displayKeyCodeName()
 }
-document.onclick = function() {
-  ultimatefocus(hiddeninput)
-}
+/* =========================================== */
+
+/* ================= HELPERS ================= */
 
 //This is for firefox, some key events are not triggered if a text input isn't on focus!
-function ultimatefocus(target) {
+function putFocusOn(target) {
   target.focus()
   target.value = ''
 }
-
 
 function copyToClipboard(target) {
   let keycodeNum = document.querySelector('.keycodeNum')
@@ -81,6 +94,7 @@ function copyToClipboard(target) {
     console.warn('Oops, unable to copy')
   }
 }
+/* =========================================== */
 
 function displayKeyCodeName() {
   let keycodesKeys = {
@@ -232,7 +246,7 @@ function displayKeyCodeName() {
   let keycodeNum = document.querySelector('.keycodeNum')
   let keypressed = keycodesKeys[keycodeNum.innerHTML]
   if (keycodeNum.innerHTML === '0') {
-    ultimatefocus(hiddeninput)
+    putFocusOn(hiddeninput)
     keyboardKey.innerHTML = '<h3>Wish i knew what you pressed! <a href=\'https://github.com/elementh/gimme-keycodes/issues/new?title=Found a missing keycode&body=I also accept pull requests! ;)\'>Why don\'t you let me know?</a></h3>'
   } else if (keycodeNum.innerHTML === '229') {
     keyboardKey.innerHTML = '<h3>Wish i knew what you pressed but sadly Chrome(and derivates) on Android don\'t fully support keycodes :( . You still can try the numbers keys, they should work!</h3>'
