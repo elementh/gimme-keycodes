@@ -1,0 +1,28 @@
+{
+  "name": "gimme-keycodes",
+  "private": true,
+  "version": "0.8.0",
+  "description": "get javascript keycodes for every key on your keyboard!",
+  "main": "/assets/index.js",
+  "scripts": {
+    "test": "standard",
+    "watch": "watchify assets/main.js -o js/bundle.js -v",
+    "build": "browserify assets/main.js  | uglifyjs -mc warnings=false > js/bundle.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elementh/gimme-keycodes.git"
+  },
+  "author": "Lucas Maximiliano Marino",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/elementh/gimme-keycodes/issues"
+  },
+  "homepage": "https://github.com/elementh/gimme-keycodes#readme",
+  "devDependencies": {
+    "browserify": "^13.0.1",
+    "standard": "^8.6.0",
+    "uglify-js": "^2.7.0",
+    "watchify": "^3.7.0"
+  }
+}
