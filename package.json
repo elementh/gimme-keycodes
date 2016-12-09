@@ -6,8 +6,8 @@
   "main": "/assets/index.js",
   "scripts": {
     "test": "standard",
-    "watch": "watchify assets/index.js -o js/bundle.js -v",
-    "build": "standard browserify assets/main.js  | uglifyjs -mc warnings=false > js/bundle.js"
+    "watch": "watchify assets/main.js -o js/bundle.js -v",
+    "build": "npm run test && browserify assets/main.js  | uglifyjs -mc warnings=false > js/bundle.js"
   },
   "repository": {
     "type": "git",

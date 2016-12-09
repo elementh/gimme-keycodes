@@ -33,10 +33,30 @@ h3 {
 /* ============= KEYCODEDISPLAY ============== */
 .display {
     text-align: center;
-    color: #f44336;
-    width: 100%;
-    height: 60%;
+    color: #f44336;/*========== min-aspect-ratio: 8/5 ========== */
+/* =========================================== */
+/*@media screen and (min-aspect-ratio: 8/5) {
+  /*//TITLE//*/
+  .title{
+    font-size: 8vw;
+  }
+  /*//KEYBOARDKEY//*/
+  .keyboardKey {
+    margin-top: 1vw;
+    font-size: 1vw;
+  }
+  /*//TIP//*/
+  .tip {
+    margin-top: 1vw;
+    font-size: 1vw;
+  }
+  /*//ABOUT//*/
+  .about {
+    font-size: 1.5vw;
+  }*/
 }
+/* =========================================== */
+
 
 .display h1 {
     padding: 1em;
@@ -94,6 +114,30 @@ a:hover {
     text-decoration: underline;
 }
 /* =========================================== */
+/*========== min-aspect-ratio: 8/5 ========== */
+/* =========================================== */
+/*@media screen and (min-aspect-ratio: 8/5) {
+ /*//TITLE//*/
+ .title{
+   font-size: 8vw;
+ }
+ /*//KEYBOARDKEY//*/
+ .keyboardKey {
+   margin-top: 1vw;
+   font-size: 1vw;
+ }
+ /*//TIP//*/
+ .tip {
+   margin-top: 1vw;
+   font-size: 1vw;
+ }
+ /*//ABOUT//*/
+ .about {
+   font-size: 1.5vw;
+ }*/
+}
+/* =========================================== */
+
 
 /* ============= FORK ME ON GITHUB =========== */
 .octicon {
