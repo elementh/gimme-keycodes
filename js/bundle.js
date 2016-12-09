@@ -1,1 +1,58 @@
-console.error("SyntaxError: {\n  \"name\": \"gimme-keycodes\",\n  \"private\": true,\n  \"version\": \"0.8.0\",\n  \"description\": \"get javascript keycodes for every key on your keyboard!\",\n  \"main\": \"/assets/index.js\",\n  \"scripts\": {\n    \"test\": \"standard\",\n    \"watch\": \"watchify assets/main.js -o js/bundle.js -v\",\n    \"build\": \"browserify assets/main.js  | uglifyjs -mc warnings=false > js/bundle.js\n  },\n  \"repository\": {\n    \"type\": \"git\",\n    \"url\": \"git+https://github.com/elementh/gimme-keycodes.git\"\n  },\n  \"author\": \"Lucas Maximiliano Marino\",\n  \"license\": \"MIT\",\n  \"bugs\": {\n    \"url\": \"https://github.com/elementh/gimme-keycodes/issues\"\n  },\n  \"homepage\": \"https://github.com/elementh/gimme-keycodes#readme\",\n  \"devDependencies\": {\n    \"browserify\": \"^13.0.1\",\n    \"standard\": \"^8.6.0\",\n    \"uglify-js\": \"^2.7.0\",\n    \"watchify\": \"^3.7.0\"\n  }\n}\n : Unexpected token \n in JSON at position 360");
+(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+'use strict'
+
+const selectors = require('./selectors')
+
+function update (e) {
+  changehtml(e.key, e.keyCode)
+}
+
+function changehtml (key, keycode) {
+  selectors.display(keycode)
+  selectors.key(key)
+}
+
+module.exports = {
+  update: update
+}
+
+},{"./selectors":3}],2:[function(require,module,exports){
+'use strict'
+
+const gimmekeycodes = require('./gimmekeycodes')
+
+document.addEventListener('keydown', function (e) {
+  gimmekeycodes.update(e)
+})
+
+},{"./gimmekeycodes":1}],3:[function(require,module,exports){
+'use strict'
+
+function display (text) {
+  let display = document.querySelector('.display')
+  display.innerHTML = '<p>' + text + '<p>'
+}
+
+function key (text) {
+  let key = document.querySelector('.key')
+  if (isVowel(text)) {
+    key.innerHTML = '<h3>You pressed an \'' + text + '\' key!</h3>'
+  } else {
+    key.innerHTML = '<h3>You pressed a \'' + text + '\' key!</h3>'
+  }
+}
+
+function isVowel (text) {
+  if (text.charAt(0) === 'a' || text.charAt(0) === 'e' || text.charAt(0) === 'i' || text.charAt(0) === 'o' || text.charAt(0) === 'u') {
+    return true
+  } else {
+    return false
+  }
+}
+
+module.exports = {
+  display: display,
+  key: key
+}
+
+},{}]},{},[2]);

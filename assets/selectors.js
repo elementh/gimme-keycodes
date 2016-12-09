@@ -1,7 +1,7 @@
 'use strict'
 
 function display (text) {
-  var display = document.querySelector('.display')
+  let display = document.querySelector('.display')
   display.innerHTML = '<p>' + text + '<p>'
 }
 
