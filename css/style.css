@@ -33,33 +33,13 @@ h3 {
 /* ============= KEYCODEDISPLAY ============== */
 .display {
     text-align: center;
-    color: #f44336;/*========== min-aspect-ratio: 8/5 ========== */
-/* =========================================== */
-/*@media screen and (min-aspect-ratio: 8/5) {
-  /*//TITLE//*/
-  .title{
-    font-size: 8vw;
-  }
-  /*//KEYBOARDKEY//*/
-  .keyboardKey {
-    margin-top: 1vw;
-    font-size: 1vw;
-  }
-  /*//TIP//*/
-  .tip {
-    margin-top: 1vw;
-    font-size: 1vw;
-  }
-  /*//ABOUT//*/
-  .about {
-    font-size: 1.5vw;
-  }*/
+    color: #f44336;
 }
-/* =========================================== */
-
-
 .display h1 {
     padding: 1em;
+}
+.display p {
+    font-size: 9.3rem;
 }
 /* =========================================== */
 
@@ -97,7 +77,8 @@ h3 {
 
 /* ================== ABOUT ================== */
 
-.about {}
+.about {
+}
 
 .about p {}
 
@@ -114,30 +95,6 @@ a:hover {
     text-decoration: underline;
 }
 /* =========================================== */
-/*========== min-aspect-ratio: 8/5 ========== */
-/* =========================================== */
-/*@media screen and (min-aspect-ratio: 8/5) {
- /*//TITLE//*/
- .title{
-   font-size: 8vw;
- }
- /*//KEYBOARDKEY//*/
- .keyboardKey {
-   margin-top: 1vw;
-   font-size: 1vw;
- }
- /*//TIP//*/
- .tip {
-   margin-top: 1vw;
-   font-size: 1vw;
- }
- /*//ABOUT//*/
- .about {
-   font-size: 1.5vw;
- }*/
-}
-/* =========================================== */
-
 
 /* ============= FORK ME ON GITHUB =========== */
 .octicon {

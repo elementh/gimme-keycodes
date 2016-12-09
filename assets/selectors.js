@@ -1,11 +1,11 @@
 'use strict'
 
-function display(text) {
-  let display = document.querySelector('.display')
-  display.innerHTML = '<h1>' + text + '</1>'
+function display (text) {
+  var display = document.querySelector('.display')
+  display.innerHTML = '<p>' + text + '<p>'
 }
 
-function key(text) {
+function key (text) {
   let key = document.querySelector('.key')
   if (isVowel(text)) {
     key.innerHTML = '<h3>You pressed an \'' + text + '\' key!</h3>'

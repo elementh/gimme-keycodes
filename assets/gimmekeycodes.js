@@ -10,6 +10,7 @@ function changehtml (key, keycode) {
   selectors.display(keycode)
   selectors.key(key)
 }
+
 module.exports = {
   update: update
 }
