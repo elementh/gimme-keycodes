@@ -2,7 +2,7 @@
 
 function display (text) {
   let display = document.querySelector('.display')
-  display.innerHTML = '<p>' + text + '<p>'
+  display.innerHTML = '<h1>' + text + '<h1>'
 }
 
 function key (text) {
