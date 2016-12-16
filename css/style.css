@@ -1,9 +1,4 @@
 /* =================== BODY ================== */
-* {
-    margin: 0;
-    padding: 0;
-}
-
 body, html {
     text-align: center;
     max-width: 800px;
@@ -20,37 +15,37 @@ h3 {
 }
 /* =========================================== */
 
-/* ============= WRAPPER+CONTENT ============= */
-.wrapper {
-    height: 100%;
-}
-
-.content {
-    height: 95%;
+/* ================ CONTAINER ================ */
+.container {
+    display: flex;
+    flex-direction: column;
 }
 /* =========================================== */
 
 /* ============= KEYCODEDISPLAY ============== */
 .display {
-    text-align: center;
+    order: 1;
     color: #3f51b5;
+    max-height: 25rem;
 }
 .display h1 {
-    padding: 1em;
+  font-size: 10rem;
 }
 .display p {
-    font-size: 9.3rem;
+    /*padding: auto;
+    margin: auto;*/
+    font-size: 5rem;
 }
 /* =========================================== */
 
 /* =============== KEYBOARDKEY =============== */
 .key {
-    display: inline-block;
-    text-align: center;
+    order: 2;
     color: #8c9eff;
 }
 
 .key h3 {
+    display: inline-block;
     padding: 1em;
     background-color: #EAEAEA;
     border-radius: 0.4em 0.4em 0.4em 0.4em;
@@ -63,11 +58,8 @@ h3 {
 /* =========================================== */
 /* ================== TITLE ================== */
 .title {
-    padding: 0;
-    text-align: center;
     font-family: 'Lobster';
     font-weight: 400;
-    margin-bottom: 1.5rem;
     font-size: 3rem;
     color: #3f51b5;
     transition: text-shadow 2s;
@@ -78,11 +70,8 @@ h3 {
 /* ================== ABOUT ================== */
 
 .about {
+    order: 3;
 }
-
-.about p {}
-
-
 /* =========================================== */
 
 /* ================== LINKS ================== */
