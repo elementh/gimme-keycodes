@@ -30,15 +30,15 @@ document.addEventListener('keydown', function (e) {
 
 function display (text) {
   let display = document.querySelector('.display')
-  display.innerHTML = '<h1>' + text + '<h1>'
+  display.innerHTML = `<h1>${text}</h1>`
 }
 
 function key (text) {
   let key = document.querySelector('.key')
   if (isVowel(text)) {
-    key.innerHTML = '<h3>You pressed an \'' + text + '\' key!</h3>'
+    key.innerHTML = `<h3>You pressed an '${text}' key!</h3>`
   } else {
-    key.innerHTML = '<h3>You pressed a \'' + text + '\' key!</h3>'
+    key.innerHTML = `<h3>You pressed a '${text}' key!</h3>`
   }
 }
 
