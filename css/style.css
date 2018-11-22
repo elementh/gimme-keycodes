@@ -7,7 +7,7 @@ body, html {
     font-family: 'Comfortaa', sans-serif;
     font-weight: 400;
     height: 100%;
-    overflow: hidden;
+    min-height: 100vh;
 }
 
 h3 {
@@ -17,8 +17,10 @@ h3 {
 
 /* ================ CONTAINER ================ */
 .container {
+    height: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 /* =========================================== */
 
