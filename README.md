@@ -16,7 +16,7 @@ Feel free to fill an issue, send a pull request or even send me an e-mail!
 
 # License
 
-Copyright (C) 2016 <a href="lucasmarino.me">Lucas Maximiliano Marino</a>
+Copyright (C) 2019 <a href="https://lucasmarino.me">Lucas Maximiliano Marino</a>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
