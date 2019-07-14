@@ -29,12 +29,21 @@ h3 {
     max-height: 25rem;
 }
 .display h1 {
-  font-size: 10rem;
+  font-size: 10em;
 }
 .display p {
     /*padding: auto;
     margin: auto;*/
     font-size: 5rem;
+}
+
+@media screen and (max-aspect-ratio: 8/5 ) {
+    .display h1 {
+        font-size: 7rem;
+      }
+    .display p {
+        font-size: 3.5rem;
+    }
 }
 /* =========================================== */
 
