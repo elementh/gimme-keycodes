@@ -1,17 +1,19 @@
 'use strict'
 
 function display (text) {
-  let display = document.querySelector('.display')
-  display.innerHTML = '<h1>' + text + '<h1>'
+  let displayElement = document.querySelector('.display')
+  displayElement.innerHTML = '<h1>' + text + '<h1>'
 }
 
-function key (text) {
-  let key = document.querySelector('.key')
+function key (text, eventCode) {
+  let keyElement = document.querySelector('.key')
   if (isVowel(text)) {
-    key.innerHTML = '<h3>You pressed an \'' + text + '\' key!</h3>'
+    keyElement.innerHTML = '<h3>You pressed an \'' + text + '\' key!</h3>'
   } else {
-    key.innerHTML = '<h3>You pressed a \'' + text + '\' key!</h3>'
+    keyElement.innerHTML = '<h3>You pressed a \'' + text + '\' key!</h3>'
   }
+  keyElement.innerHTML += '<br>'
+  keyElement.innerHTML += '<p>event.code: \'' + eventCode + '\'</p>'
 }
 
 function isVowel (text) {
