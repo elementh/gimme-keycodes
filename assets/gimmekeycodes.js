@@ -3,12 +3,12 @@
 const selectors = require('./selectors')
 
 function update (e) {
-  changehtml(e.key, e.keyCode)
+  changehtml(e.key, e.keyCode, e.code)
 }
 
-function changehtml (key, keycode) {
+function changehtml (key, keycode, eventCode) {
   selectors.display(keycode)
-  selectors.key(key)
+  selectors.key(key, eventCode)
 }
 
 module.exports = {
