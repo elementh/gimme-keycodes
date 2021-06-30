@@ -20,9 +20,9 @@
   },
   "homepage": "https://github.com/elementh/gimme-keycodes#readme",
   "devDependencies": {
-    "browserify": "^16.5.0",
-    "standard": "^14.3.0",
+    "browserify": "^17.0.0",
+    "standard": "^16.0.3",
     "uglify-js": "^3.6.0",
-    "watchify": "^3.11.1"
+    "watchify": "^4.0.0"
   }
 }
