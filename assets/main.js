@@ -7,4 +7,12 @@ document.addEventListener('keydown', function (e) {
     e.preventDefault()
   }
   gimmekeycodes.update(e)
+  if (gtag)
+  {
+    gtag("event", "key_press",{
+      key: e.key,
+      keyCode: e.keyCode,
+      eventCode: e.code
+    })
+  }
 })
