@@ -7,7 +7,7 @@
   "scripts": {
     "test": "standard",
     "watch": "watchify assets/main.js -o js/bundle.js -v",
-    "build": "browserify assets/main.js  | uglifyjs -mc warnings=false > js/bundle.js"
+    "build": "browserify assets/main.js  | uglifyjs -mc > js/bundle.js"
   },
   "repository": {
     "type": "git",
